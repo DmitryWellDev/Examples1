@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import ControledOnOff from './components/ControledOnOff/ControledOnOff';
+import Rating, {RatingValueType} from "./components/Rating/Rating";
+import Accordion from "./components/Accordion/Accordion";
 
 function App() {
+
+  let [on, setOn] = useState(false)
+
+    let [ratingValue, setRatingvalue] = useState<RatingValueType>(0)
+
+    let [collapsed, setCollapsed] = useState(false)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ControledOnOff on={on} onChange={setOn}/>
+        <Rating setRatingvalue={setRatingvalue} value={ratingValue}/>
+        <Accordion title={'Menu'} setCollapsed={() => {setCollapsed(!collapsed)}} collapsed={collapsed}/>
     </div>
   );
 }
