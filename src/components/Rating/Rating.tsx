@@ -32,7 +32,8 @@ type StarPropsType = {
 const Star = React.memo((props: StarPropsType) => {
 
     return <span onClick={() => {props.setRatingvalue(props.value)}}>{props.selected ? <b>Star </b> : 'Star'}</span>
-
 })
 
+
+ //first commit
 export default Rating
