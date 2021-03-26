@@ -35,6 +35,6 @@ const Star = React.memo((props: StarPropsType) => {
 })
 
 
- //first commit
+ //first commit- update
  //second commit
 export default Rating
