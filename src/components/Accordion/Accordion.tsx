@@ -11,21 +11,18 @@ type AccordionPropsType = {
     title: string
     collapsed: boolean
     setCollapsed:() => void
-    // items: ItemsType[]
-    // onItemClick: (value: any) => void
+    items: Array<ItemsType>
+    onItemClick: (value: any) => void
 }
 
-function Accordion(props:AccordionPropsType) {
+const Accordion = React.memo((props:AccordionPropsType) => {
 
     return(
         <div>
             <AccordionTitle title={props.title} setCollapsed={props.setCollapsed} />
-            {props.collapsed && <AccordionBody
-                // items={props.items}
-                // onItemClick={props.onItemClick}
-            />}
+            {props.collapsed && <AccordionBody items={props.items} onItemClick={props.onItemClick}/>}
         </div>
     )
-}
+})
 
 export default Accordion

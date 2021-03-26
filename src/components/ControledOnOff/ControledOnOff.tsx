@@ -6,7 +6,7 @@ type ControledOnOff = {
     onChange: (on: boolean) => void
 }
 
-function ControledOnOff(props:ControledOnOff) {
+const ControledOnOff = React.memo((props:ControledOnOff) => {
 
 return(
     <div className={styles.wrap}>
@@ -15,6 +15,6 @@ return(
         <div className={props.on ? styles.circle : styles.circleOff}></div>
     </div>
 )
-}
+})
 
 export default ControledOnOff

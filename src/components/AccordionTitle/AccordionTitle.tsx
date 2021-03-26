@@ -6,12 +6,12 @@ type AccordionTitlePropsType = {
     // collapsed: boolean
 }
 
-function AccordionTitle(props:AccordionTitlePropsType) {
+const AccordionTitle = React.memo((props:AccordionTitlePropsType) => {
     return (
         <div>
             <h3 onClick={(e) => {props.setCollapsed()}}>{props.title}</h3>
         </div>
     )
-}
+})
 
 export default AccordionTitle

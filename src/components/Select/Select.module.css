@@ -1,0 +1,18 @@
+.main {
+    width: 150px;
+    margin: 0 auto;
+}
+
+.listHeader {
+    width: 150px;
+    border: 1px solid #000;
+}
+
+.list {
+    width: 150px;
+    border: 1px solid #000;
+}
+
+.selected {
+    background-color: #1ea7fd;
+}
